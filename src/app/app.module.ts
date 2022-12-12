@@ -13,6 +13,7 @@ import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { ViewEmployeeComponent } from './view-employee/view-employee.component';
 import { SearchEmployeeComponent } from './search-employee/search-employee.component';
 import { AddSecurityComponent } from './add-security/add-security.component';
+import { ViewSecurityComponent } from './view-security/view-security.component';
 
 const myRoute:Routes=[
   {
@@ -39,6 +40,10 @@ const myRoute:Routes=[
     path:"addGuard",
     component:AddSecurityComponent
 
+  },{
+    path:"viewGuard",
+    component:ViewSecurityComponent
+
   }
 ]
 
@@ -51,7 +56,8 @@ const myRoute:Routes=[
     AdminNavbarComponent,
     ViewEmployeeComponent,
     SearchEmployeeComponent,
-    AddSecurityComponent
+    AddSecurityComponent,
+    ViewSecurityComponent
   ],
   imports: [
     BrowserModule,
