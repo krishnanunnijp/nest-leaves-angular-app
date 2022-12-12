@@ -2,16 +2,16 @@ import { Component } from '@angular/core';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-search-employee',
-  templateUrl: './search-employee.component.html',
-  styleUrls: ['./search-employee.component.css']
+  selector: 'app-search-security',
+  templateUrl: './search-security.component.html',
+  styleUrls: ['./search-security.component.css']
 })
-export class SearchEmployeeComponent {
-  employeeCode=""
+export class SearchSecurityComponent {
+  guardnumber=""
 
   data1:any=[]
   constructor(private api:ApiService){
-    this.api.fetchEmployee().subscribe(
+    this.api.fetchSecurity().subscribe(
       (generated:any)=>{
         this.data1=generated;
       }
@@ -19,11 +19,11 @@ export class SearchEmployeeComponent {
     }
 
       
-  searchE=()=>{
+  searchS=()=>{
     let data={
-      "employeeCode":this.employeeCode
+      "guardnumber":this.guardnumber
     }
-    this.api.searchEmployee(data).subscribe(
+    this.api.searchSecurity(data).subscribe(
       (generated:any)=>{
         if(generated.length!=0){
         console.log(generated)
@@ -38,7 +38,7 @@ export class SearchEmployeeComponent {
   }
   deleteBtnClick=(id:any)=>{
     let data:any={"id":id}
-    this.api.deleteEmployee(data).subscribe(
+    this.api.deleteSecurity(data).subscribe(
       (generated:any)=>{
         console.log(generated)
         if(generated.status=="success"){
@@ -48,7 +48,4 @@ export class SearchEmployeeComponent {
       }
     )
   }
-    }
-
- 
-
+}
