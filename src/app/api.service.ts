@@ -18,4 +18,10 @@ export class ApiService {
   fetchEmployee=()=>{
     return this.http.get("http://localhost:8080/view")
   }
+  searchEmployee=(value:any)=>{
+    return this.http.post("http://localhost:8080/search",value)
+  }
+  deleteEmployee=(value:any)=>{
+    return this.http.post("http://localhost:8080/delete",value)
+  }
 }
