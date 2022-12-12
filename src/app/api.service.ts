@@ -24,4 +24,8 @@ export class ApiService {
   deleteEmployee=(value:any)=>{
     return this.http.post("http://localhost:8080/delete",value)
   }
+
+  addSec=(value:any)=>{
+    return this.http.post("http://localhost:8080/addGuard",value)
+  }
 }
