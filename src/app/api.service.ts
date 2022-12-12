@@ -12,4 +12,7 @@ export class ApiService {
     return this.http.post("http://localhost:8080/login",value)
 
   }
+  addEmp=(value:any)=>{
+    return this.http.post("http://localhost:8080/add",value)
+  }
 }
