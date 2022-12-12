@@ -28,4 +28,7 @@ export class ApiService {
   addSec=(value:any)=>{
     return this.http.post("http://localhost:8080/addGuard",value)
   }
+  fetchSecurity=()=>{
+    return this.http.get("http://localhost:8080/viewGuard")
+  }
 }
