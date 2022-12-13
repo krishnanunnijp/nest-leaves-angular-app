@@ -19,6 +19,7 @@ import { AddLeavesComponent } from './add-leaves/add-leaves.component';
 import { NavbarLeavesComponent } from './navbar-leaves/navbar-leaves.component';
 import { ViewLeavesComponent } from './view-leaves/view-leaves.component';
 import { ViewLeavesStatusComponent } from './view-leaves-status/view-leaves-status.component';
+import { LoginSecurityComponent } from './login-security/login-security.component';
 
 const myRoute:Routes=[
   {
@@ -65,6 +66,10 @@ const myRoute:Routes=[
     path:"Leaves",
     component:ViewLeavesComponent
 
+  },{
+    path:"guard",
+    component:LoginSecurityComponent
+
   }
 ]
 
@@ -83,7 +88,8 @@ const myRoute:Routes=[
     AddLeavesComponent,
     NavbarLeavesComponent,
     ViewLeavesComponent,
-    ViewLeavesStatusComponent
+    ViewLeavesStatusComponent,
+    LoginSecurityComponent
   ],
   imports: [
     BrowserModule,
