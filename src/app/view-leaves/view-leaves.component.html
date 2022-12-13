@@ -1,0 +1,39 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-4">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <table class="table table-bordered border-primary">
+                        <thead>
+                        <tr scope="row">
+                            <th scope="col">name</th>
+                            <th scope="col">designation</th>
+                            <th scope="col">typeOfleave</th>
+                            <th scope="col">reason</th>
+                            <th scope="col">from</th>
+                            <th scope="col">to</th>
+                            <th scope="col">days</th>
+                            <th scope="col">remarks</th>
+                        </tr></thead>
+                        <tbody>
+                        <tr *ngFor="let i of data" scope="row">
+                            <td scope="col" *ngIf="i.status==-1" >{{i.name}}</td>
+                            <td scope="col" *ngIf="i.status==-1" >{{i.designation}}</td>
+                            <td scope="col" *ngIf="i.status==-1" >{{i.type_ofleave}}</td>
+                            <td scope="col" *ngIf="i.status==-1" >{{i.reason}}</td>
+                            <td scope="col" *ngIf="i.status==-1" >{{i.from}}</td>
+                            <td scope="col" *ngIf="i.status==-1" >{{i.to}}</td>
+                            <td scope="col" *ngIf="i.status==-1" >{{i.days}}</td>
+                            <td scope="col" *ngIf="i.status==-1" ><input name="remarks" [(ngModel)]="remarks" type="text" class="form-control"></td>
+                            <td scope="col" *ngIf="i.status==-1" ><button (click)="approve(i.id,i.empid,i.type_ofleave,i.days)" class="btn btn-success" >approve</button></td>
+                            <td scope="col" *ngIf="i.status==-1" ><button (click)="reject(i.id)" class="btn btn-danger" >reject</button></td>
+
+                        </tr></tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+  </div>
