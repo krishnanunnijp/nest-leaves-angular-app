@@ -59,4 +59,8 @@ export class ApiService {
   editLeaves=(value:any)=>{
     return this.http.post("http://localhost:8080/editLeaves",value)
   }
+  getSecurityPassword=(value:any)=>{
+    return this.http.post("http://localhost:8080/loginGuard",value)
+
+  }
 }
