@@ -14,6 +14,8 @@ import { ViewEmployeeComponent } from './view-employee/view-employee.component';
 import { SearchEmployeeComponent } from './search-employee/search-employee.component';
 import { AddSecurityComponent } from './add-security/add-security.component';
 import { ViewSecurityComponent } from './view-security/view-security.component';
+import { SearchSecurityComponent } from './search-security/search-security.component';
+import { AddLeavesComponent } from './add-leaves/add-leaves.component';
 
 const myRoute:Routes=[
   {
@@ -44,6 +46,14 @@ const myRoute:Routes=[
     path:"viewGuard",
     component:ViewSecurityComponent
 
+  },{
+    path:"searchGuard",
+    component:SearchSecurityComponent
+
+  },{
+    path:"addLeaves",
+    component:AddLeavesComponent
+
   }
 ]
 
@@ -57,7 +67,9 @@ const myRoute:Routes=[
     ViewEmployeeComponent,
     SearchEmployeeComponent,
     AddSecurityComponent,
-    ViewSecurityComponent
+    ViewSecurityComponent,
+    SearchSecurityComponent,
+    AddLeavesComponent
   ],
   imports: [
     BrowserModule,

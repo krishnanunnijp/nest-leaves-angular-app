@@ -27,6 +27,7 @@ export class AddEmployeeComponent {
       "designation":this.designation,
       "salary":this.salary,
       "mobileNumber":this.mobileNumber,
+      "userName":this.userName,
       "password":this.mobileNumber
     }
     this.api.addEmp(this.data).subscribe(
@@ -34,6 +35,18 @@ export class AddEmployeeComponent {
         console.log(generated)
         if(generated.status=="success"){
           alert("added ")
+          let data2:any={
+    
+            "emp_id" : this.employeeCode,
+            "casual_leaves" : 20,
+            "sick_leave" : 7,
+            "special_leave" : 3
+    }
+          this.api.addTotal(data2).subscribe(
+            (generated1)=>{
+              console.log(generated1)
+            }
+          )
           this.employeeCode=""
           this.name=""
           this.designation=""

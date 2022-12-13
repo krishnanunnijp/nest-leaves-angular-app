@@ -31,4 +31,19 @@ export class ApiService {
   fetchSecurity=()=>{
     return this.http.get("http://localhost:8080/viewGuard")
   }
+  searchSecurity=(value:any)=>{
+    return this.http.post("http://localhost:8080/searchGuard",value)
+  }
+  deleteSecurity=(value:any)=>{
+    return this.http.post("http://localhost:8080/deleteGuard",value)
+  }
+  addTotal=(value:any)=>{
+    return this.http.post("http://localhost:8080/addTotal",value)
+  }
+  searchTotal=(value:any)=>{
+    return this.http.post("http://localhost:8080/searchTotal",value)
+  }
+  addLeaves=(value:any)=>{
+    return this.http.post("http://localhost:8080/addLeaves",value)
+  }
 }
