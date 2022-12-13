@@ -63,4 +63,15 @@ export class ApiService {
     return this.http.post("http://localhost:8080/loginGuard",value)
 
   }
+  checkinLog=(value:any)=>{
+    return this.http.post("http://localhost:8080/addLog",value)
+  }
+  checkoutLog=(value:any)=>{
+    return this.http.post("http://localhost:8080/editLog",value)
+  }
+  searchLog=(value:any)=>{
+    return this.http.post("http://localhost:8080/dateLog",value)
+  }
+
+  
 }

@@ -20,6 +20,10 @@ import { NavbarLeavesComponent } from './navbar-leaves/navbar-leaves.component';
 import { ViewLeavesComponent } from './view-leaves/view-leaves.component';
 import { ViewLeavesStatusComponent } from './view-leaves-status/view-leaves-status.component';
 import { LoginSecurityComponent } from './login-security/login-security.component';
+import { EmployeeCheckinComponent } from './employee-checkin/employee-checkin.component';
+import { NavbarSecurityComponent } from './navbar-security/navbar-security.component';
+import { ViewCheckinComponent } from './view-checkin/view-checkin.component';
+import { ProfileEmployeeComponent } from './profile-employee/profile-employee.component';
 
 const myRoute:Routes=[
   {
@@ -70,6 +74,18 @@ const myRoute:Routes=[
     path:"guard",
     component:LoginSecurityComponent
 
+  },{
+    path:"checkin",
+    component:EmployeeCheckinComponent
+
+  },{
+    path:"searchCheckin",
+    component:ViewCheckinComponent
+
+  },{
+    path:"profile",
+    component:ProfileEmployeeComponent
+
   }
 ]
 
@@ -89,7 +105,11 @@ const myRoute:Routes=[
     NavbarLeavesComponent,
     ViewLeavesComponent,
     ViewLeavesStatusComponent,
-    LoginSecurityComponent
+    LoginSecurityComponent,
+    EmployeeCheckinComponent,
+    NavbarSecurityComponent,
+    ViewCheckinComponent,
+    ProfileEmployeeComponent
   ],
   imports: [
     BrowserModule,
