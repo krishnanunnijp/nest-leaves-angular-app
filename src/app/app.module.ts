@@ -24,6 +24,7 @@ import { EmployeeCheckinComponent } from './employee-checkin/employee-checkin.co
 import { NavbarSecurityComponent } from './navbar-security/navbar-security.component';
 import { ViewCheckinComponent } from './view-checkin/view-checkin.component';
 import { ProfileEmployeeComponent } from './profile-employee/profile-employee.component';
+import { SecurityProfileComponent } from './security-profile/security-profile.component';
 
 const myRoute:Routes=[
   {
@@ -86,6 +87,10 @@ const myRoute:Routes=[
     path:"profile",
     component:ProfileEmployeeComponent
 
+  },{
+    path:"securityProfile",
+    component:SecurityProfileComponent
+
   }
 ]
 
@@ -109,7 +114,8 @@ const myRoute:Routes=[
     EmployeeCheckinComponent,
     NavbarSecurityComponent,
     ViewCheckinComponent,
-    ProfileEmployeeComponent
+    ProfileEmployeeComponent,
+    SecurityProfileComponent
   ],
   imports: [
     BrowserModule,
