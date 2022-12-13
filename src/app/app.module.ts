@@ -15,6 +15,7 @@ import { SearchEmployeeComponent } from './search-employee/search-employee.compo
 import { AddSecurityComponent } from './add-security/add-security.component';
 import { ViewSecurityComponent } from './view-security/view-security.component';
 import { SearchSecurityComponent } from './search-security/search-security.component';
+import { AddLeavesComponent } from './add-leaves/add-leaves.component';
 
 const myRoute:Routes=[
   {
@@ -49,6 +50,10 @@ const myRoute:Routes=[
     path:"searchGuard",
     component:SearchSecurityComponent
 
+  },{
+    path:"addLeaves",
+    component:AddLeavesComponent
+
   }
 ]
 
@@ -63,7 +68,8 @@ const myRoute:Routes=[
     SearchEmployeeComponent,
     AddSecurityComponent,
     ViewSecurityComponent,
-    SearchSecurityComponent
+    SearchSecurityComponent,
+    AddLeavesComponent
   ],
   imports: [
     BrowserModule,

@@ -27,7 +27,7 @@ export class EmployeeLoginComponent {
 
           localStorage.setItem("empinfo",this.data1.employeeCode)
           console.log(localStorage.getItem("empinfo"))
-          this.router.navigate(['/empview'])
+          this.router.navigate(['/addLeaves'])
          
         }else{
           alert("invalid password")

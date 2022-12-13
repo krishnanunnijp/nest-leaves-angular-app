@@ -37,4 +37,13 @@ export class ApiService {
   deleteSecurity=(value:any)=>{
     return this.http.post("http://localhost:8080/deleteGuard",value)
   }
+  addTotal=(value:any)=>{
+    return this.http.post("http://localhost:8080/addTotal",value)
+  }
+  searchTotal=(value:any)=>{
+    return this.http.post("http://localhost:8080/searchTotal",value)
+  }
+  addLeaves=(value:any)=>{
+    return this.http.post("http://localhost:8080/addLeaves",value)
+  }
 }
