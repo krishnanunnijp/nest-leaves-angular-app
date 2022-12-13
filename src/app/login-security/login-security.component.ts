@@ -25,9 +25,9 @@ export class LoginSecurityComponent {
           localStorage.setItem("nav","1")
           console.log(this.data1.guardnumber)
 
-          localStorage.setItem("empinfo",this.data1.guardnumber)
-          console.log(localStorage.getItem("empinfo"))
-          this.router.navigate(['/addLeaves'])
+          localStorage.setItem("guardinfo",this.data1.guardnumber)
+          console.log(localStorage.getItem("guardinfo"))
+          this.router.navigate(['/checkin'])
          
         }else{
           alert("invalid password")
