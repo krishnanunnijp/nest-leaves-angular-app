@@ -16,6 +16,9 @@ import { AddSecurityComponent } from './add-security/add-security.component';
 import { ViewSecurityComponent } from './view-security/view-security.component';
 import { SearchSecurityComponent } from './search-security/search-security.component';
 import { AddLeavesComponent } from './add-leaves/add-leaves.component';
+import { NavbarLeavesComponent } from './navbar-leaves/navbar-leaves.component';
+import { ViewLeavesComponent } from './view-leaves/view-leaves.component';
+import { ViewLeavesStatusComponent } from './view-leaves-status/view-leaves-status.component';
 
 const myRoute:Routes=[
   {
@@ -54,6 +57,14 @@ const myRoute:Routes=[
     path:"addLeaves",
     component:AddLeavesComponent
 
+  },{
+    path:"viewLeaves",
+    component:ViewLeavesStatusComponent
+
+  },{
+    path:"Leaves",
+    component:ViewLeavesComponent
+
   }
 ]
 
@@ -69,7 +80,10 @@ const myRoute:Routes=[
     AddSecurityComponent,
     ViewSecurityComponent,
     SearchSecurityComponent,
-    AddLeavesComponent
+    AddLeavesComponent,
+    NavbarLeavesComponent,
+    ViewLeavesComponent,
+    ViewLeavesStatusComponent
   ],
   imports: [
     BrowserModule,
