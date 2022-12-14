@@ -25,6 +25,7 @@ import { NavbarSecurityComponent } from './navbar-security/navbar-security.compo
 import { ViewCheckinComponent } from './view-checkin/view-checkin.component';
 import { ProfileEmployeeComponent } from './profile-employee/profile-employee.component';
 import { SecurityProfileComponent } from './security-profile/security-profile.component';
+import { AddGuestComponent } from './add-guest/add-guest.component';
 
 const myRoute:Routes=[
   {
@@ -91,6 +92,10 @@ const myRoute:Routes=[
     path:"securityProfile",
     component:SecurityProfileComponent
 
+  },{
+    path:"guest",
+    component:AddGuestComponent
+
   }
 ]
 
@@ -115,7 +120,8 @@ const myRoute:Routes=[
     NavbarSecurityComponent,
     ViewCheckinComponent,
     ProfileEmployeeComponent,
-    SecurityProfileComponent
+    SecurityProfileComponent,
+    AddGuestComponent
   ],
   imports: [
     BrowserModule,

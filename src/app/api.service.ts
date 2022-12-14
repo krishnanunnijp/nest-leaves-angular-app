@@ -72,6 +72,12 @@ export class ApiService {
   searchLog=(value:any)=>{
     return this.http.post("http://localhost:8080/dateLog",value)
   }
+  fetchLeaves=()=>{
+    return this.http.get("http://localhost:8080/viewEmpLeaves")
+  }
+  addGuest=(value:any)=>{
+    return this.http.post("http://localhost:8080/addLogGuest",value)
+  }
 
   
 }

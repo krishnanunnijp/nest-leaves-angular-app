@@ -1,19 +1,29 @@
 <app-admin-navbar></app-admin-navbar>
+<div class="view bckim"   style=" height: 89vh;  background-image: url(https://flevix.com/wp-content/uploads/2021/05/Svg-Background-1.svg);   background-repeat: no-repeat;    background-size: cover;   background-position: center center;">
+
 <div class="container">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="row g-3 mt-4">
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor=" let i of data">
-                    <div  class="card" style="width: 18rem;">
-                        <img class="rounded-circle mx-auto" width="200px" src="https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/03/GettyImages-1092658864_hero-1024x575.jpg?w=1155&h=1528" height="200px" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title text-center">{{i.guardnumber}}</h5>
-                          <h5 class="card-title text-center">{{i.name}}</h5>
-                          <p class="card-text text-center">{{i.salary}}</p>
-                          <p class="card-text text-center">{{i.mobileNumber}}</p>
-                          <p class="card-text text-center">{{i.userName}}</p>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4 col-xxl-4" *ngFor=" let i of data">
+                      <div class="card text-bg-dark mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img  src="https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/03/GettyImages-1092658864_hero-1024x575.jpg?w=1155&h=1528" class="img-fluid rounded-start" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-header">Employee code:{{i.guardnumber}}</div>
+                            <div class="card-body">
+                              <h5 class="card-title">Name :{{i.name}}</h5>
+                              <p class="card-text">Salary : {{i.salary}}</p>
+                              <p class="card-text">Mobile Number: {{i.mobileNumber}}</p>
+                              <p class="card-text">User Name: {{i.userName}}</p>
+                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                          </div>
                         </div>
                       </div>
+                </div>     
                 </div>
             </div>
         </div>

@@ -10,7 +10,7 @@ import { ApiService } from '../api.service';
 export class EmployeeCheckinComponent {
   data:any=[]
   constructor(private api:ApiService){
-    this.api.fetchEmployee().subscribe(
+    this.api.fetchLeaves().subscribe(
       (generated:any)=>{
         this.data=generated;
       }
