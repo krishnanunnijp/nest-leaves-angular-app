@@ -60,19 +60,21 @@ export class ViewLeavesComponent {
               "sick_leave": 0,
               "special_leave": value4
             }
+            console.log(data3)
           }
 
           this.api.editTotal(data3).subscribe(
             (generated: any) => {
               console.log(data3)
               console.log(generated)
+              
+            window.location.reload();
             }
           )
         }
       }
     )
     console.log(data2)
-    window.location.reload();
   }
   reject = (value: any) => {
     let data2: any = {
@@ -85,7 +87,7 @@ export class ViewLeavesComponent {
       (generatd: any) => {
         if (generatd.status == "success") {
           alert("rejected")
-
+          window.location.reload();
         }
       }
     )

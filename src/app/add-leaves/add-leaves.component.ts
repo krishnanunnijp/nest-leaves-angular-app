@@ -40,6 +40,7 @@ export class AddLeavesComponent {
       (generated:any)=>{
         if(generated.status=="success"){
           alert("leave applied")
+          window.location.reload();
         }
       }
     )
