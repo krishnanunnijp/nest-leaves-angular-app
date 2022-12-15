@@ -25,6 +25,7 @@ export class AddGuestComponent {
       (generated:any)=>{
         if(generated.status=="success"){
           alert("guest registered")
+          window.location.reload();
         }
       }
     )
