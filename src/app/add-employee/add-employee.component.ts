@@ -30,7 +30,7 @@ export class AddEmployeeComponent {
       "salary":this.salary,
       "mobileNumber":this.mobileNumber,
       "userName":this.userName,
-      "password":this.mobileNumber
+      "password":this.password
     }
     this.api.addEmp(this.data).subscribe(
       (generated:any)=>{

@@ -25,7 +25,8 @@ export class AddSecurityComponent {
       "companyName":this.companyName,
       "salary":this.salary,
       "mobileNumber":this.mobileNumber,
-      "password":this.mobileNumber
+      "userName":this.userName,
+      "password":this.password
     }
     this.api.addSec(this.data).subscribe(
       (generated:any)=>{

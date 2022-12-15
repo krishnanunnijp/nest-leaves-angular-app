@@ -7,91 +7,93 @@ import { ApiService } from '../api.service';
   styleUrls: ['./view-leaves.component.css']
 })
 export class ViewLeavesComponent {
-  data:any=[]
-  remarks=""
+  data: any = []
+  remarks = ""
 
-  constructor(private api:ApiService){
-    let data1:any={
-    
-      "empid" : localStorage.getItem("empinfo")
+  constructor(private api: ApiService) {
+    let data1: any = {
 
-}
+      "empid": localStorage.getItem("empinfo")
+
+    }
 
     this.api.viewLeaves2().subscribe(
-      (generatedValue)=>{
-        this.data=generatedValue
+      (generatedValue) => {
+        this.data = generatedValue
       }
     )
-  
+
   }
-  approve=(value:any,value2:any,value3:any,value4:any)=>{
-    let data2:any=    {
-        
+  approve = (value: any, value2: any, value3: any, value4: any) => {
+    let data2: any = {
+
       "status": 1,
       "id": value,
       "remarks": this.remarks
-  }
-  this.api.editLeaves(data2).subscribe(
-    (generatd:any)=>{
-      if(generatd.status=="success"){
-        alert("approved")
-        let data3:any={}
-        if(value3=="casual"){
-        data3={
-    
-          "emp_id" : value2,
-          "casual_leaves" : value4,
-          "sick_leave" : 0,
-          "special_leave" : 0
-  }
-}else if (value3=="sick"){
-  data3={
-    
-    "emp_id" : value2,
-    "casual_leaves" : 0,
-    "sick_leave" : value4,
-    "special_leave" : 0
-}
-}else{
-  data3={
-    
-    "emp_id" : value2,
-    "casual_leaves" : 0,
-    "sick_leave" : 0,
-    "special_leave" : value4
-}
-}
+    }
+    this.api.editLeaves(data2).subscribe(
+      (generatd: any) => {
+        if (generatd.status == "success") {
+          alert("approved")
+          let data3: any = {}
+          if (value3 == "casual") {
+            data3 = {
 
-  this.api.editTotal(data3).subscribe(
-    (generated:any)=>{
-      console.log(data3)
-      console.log(generated)
-    }
-  )
+              "emp_id": value2,
+              "casual_leaves": value4,
+              "sick_leave": 0,
+              "special_leave": 0
+            }
+          } else if (value3 == "sick") {
+            data3 = {
+
+              "emp_id": value2,
+              "casual_leaves": 0,
+              "sick_leave": value4,
+              "special_leave": 0
+            }
+          } else {
+            data3 = {
+
+              "emp_id": value2,
+              "casual_leaves": 0,
+              "sick_leave": 0,
+              "special_leave": value4
+            }
+          }
+
+          this.api.editTotal(data3).subscribe(
+            (generated: any) => {
+              console.log(data3)
+              console.log(generated)
+            }
+          )
+        }
       }
-    }
-  )
-  console.log(data2)
-}
-  reject=(value:any)=>{
-    let data2:any=    {
-        
+    )
+    console.log(data2)
+    window.location.reload();
+  }
+  reject = (value: any) => {
+    let data2: any = {
+
       "status": 0,
       "id": value,
       "remarks": this.remarks
-  }
-  this.api.editLeaves(data2).subscribe(
-    (generatd:any)=>{
-      if(generatd.status=="success"){
-        alert("rejected")
-
-      }
     }
-  )
-}
+    this.api.editLeaves(data2).subscribe(
+      (generatd: any) => {
+        if (generatd.status == "success") {
+          alert("rejected")
 
-
+        }
+      }
+    )
+    window.location.reload();
   }
+
+
+}
 
 
 
