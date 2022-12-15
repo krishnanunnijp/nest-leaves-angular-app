@@ -9,7 +9,9 @@ import { Router } from '@angular/router';
 export class AdminComponent {
   username=""
   password=""
-  constructor(private route:Router){}
+  constructor(private route:Router){
+    localStorage.setItem("emp","0");
+  }
   login=()=>{
     if(this.username=="admin" && this.password=="12345"){
       localStorage.setItem("nav","2")

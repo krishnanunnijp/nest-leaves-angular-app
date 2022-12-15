@@ -26,6 +26,8 @@ import { ViewCheckinComponent } from './view-checkin/view-checkin.component';
 import { ProfileEmployeeComponent } from './profile-employee/profile-employee.component';
 import { SecurityProfileComponent } from './security-profile/security-profile.component';
 import { AddGuestComponent } from './add-guest/add-guest.component';
+import { ViewGuestComponent } from './view-guest/view-guest.component';
+import { AdminGuestViewComponent } from './admin-guest-view/admin-guest-view.component';
 
 const myRoute:Routes=[
   {
@@ -96,6 +98,14 @@ const myRoute:Routes=[
     path:"guest",
     component:AddGuestComponent
 
+  },{
+    path:"viewguest",
+    component:ViewGuestComponent
+
+  },{
+    path:"viewadminguest",
+    component:AdminGuestViewComponent
+
   }
 ]
 
@@ -121,7 +131,9 @@ const myRoute:Routes=[
     ViewCheckinComponent,
     ProfileEmployeeComponent,
     SecurityProfileComponent,
-    AddGuestComponent
+    AddGuestComponent,
+    ViewGuestComponent,
+    AdminGuestViewComponent
   ],
   imports: [
     BrowserModule,

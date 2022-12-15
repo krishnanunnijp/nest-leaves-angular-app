@@ -2,17 +2,15 @@ import { Component } from '@angular/core';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-view-checkin',
-  templateUrl: './view-checkin.component.html',
-  styleUrls: ['./view-checkin.component.css']
+  selector: 'app-admin-guest-view',
+  templateUrl: './admin-guest-view.component.html',
+  styleUrls: ['./admin-guest-view.component.css']
 })
-export class ViewCheckinComponent {
+export class AdminGuestViewComponent {
   date=""
-emp:any=""
+
   data1:any=[]
   constructor(private api:ApiService){
-    this.emp=localStorage.getItem("emp")
-    console.log(this.emp)
     }
 
       
@@ -20,7 +18,7 @@ emp:any=""
     let data={
       "date":this.date
     }
-    this.api.searchLog(data).subscribe(
+    this.api.searchGuest(data).subscribe(
       (generated:any)=>{
         if(generated.length!=0){
 
@@ -28,7 +26,7 @@ emp:any=""
         console.log(this.data1)
       }
         else{
-          alert("no checkins")
+          alert("invalid")
         }
 
       }

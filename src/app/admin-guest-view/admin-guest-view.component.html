@@ -1,0 +1,42 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="view bckim"   style=" height: 105vh;  background-image: url(https://flevix.com/wp-content/uploads/2021/05/Svg-Background-1.svg);   background-repeat: no-repeat;    background-size: cover;   background-position: center center;">
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="name" style="color: #93FFD8;" class="form-label">Date</label>
+                    <input name="date" [(ngModel)]="date" type="date" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <button (click)="searchE()" style="background-color: #548CFF;" class="btn ">search</button>
+                </div>
+            </div>
+
+            <div class="row g-3 mt-4">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                        <tr scope="row">
+                            <th scope="col">guest id</th>
+                            <th scope="col">name</th>
+                            <th scope="col">address</th>
+                            <th scope="col">login</th>
+                            <th scope="col">logout</th>
+                        </tr></thead>
+                        <tbody>
+                        <tr *ngFor="let i of data1" scope="row">
+                            <td scope="col"  >{{i.guest_id}}</td>
+                            <td scope="col"  >{{i.name}}</td>
+                            <td scope="col"  >{{i.address}}</td>
+                            <td scope="col" >{{i.login}}</td>
+                            <td scope="col"  >{{i.logout}}</td>
+
+                        </tr></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
