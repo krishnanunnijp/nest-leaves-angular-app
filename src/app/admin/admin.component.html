@@ -1,25 +1,32 @@
-<div class="container">
-    <div class="row">
-        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <div class="row g-3 mt-4">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <h1> Admin login</h1>
+<div class="view bckim"   style=" height: 100vh;  background-image: url(https://flevix.com/wp-content/uploads/2020/01/Web-Header-Background-1.svg);   background-repeat: no-repeat;    background-size: cover;   background-position: center center;">
+    <div class=" d-flex  justify-content-center" style="height: 100vh">
+        <div class="row align-self-center d-flex " style="display: contents;">
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6 ">
+                <div class="row g-3 mt-4 d-block" >
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 vm-2">
+                        <h1 style="color: #D6E4E5;"> Admin login</h1>
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <label style="color: #497174;" for="username" class="form-label">User Name:</label>
+                        <input name="username" [(ngModel)]="username" type="text" class="form-control">
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <label style="color: #497174;" for="password" class="form-label">password:</label>
+                        <input name="password" [(ngModel)]="password" type="password" class="form-control">
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                        <a (click)="login()" style="background-color: #D6E4E5;" class="btn">login</a>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                        <a href="/employee" class="btn btn-outline-success">employee login here >></a>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                        <a href="/guard" class="btn btn-outline-success"> guard login here >> </a>
+                    </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <label for="username" class="form-label">User Name:</label>
-                    <input name="username" [(ngModel)]="username" type="text" class="form-control">
-                </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <label for="password" class="form-label">password:</label>
-                    <input name="password" [(ngModel)]="password" type="password" class="form-control">
-                </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <a (click)="login()" class="btn btn-info">login</a>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <a href="/employee" class="link-success">employee login  here</a>
-                </div>
-
+            </div>
+            <div class="col col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4   d-xl-block d-xxl-block   d-none" >
+                <img src="https://www.freeiconspng.com/uploads/forgot-password-icon-27.png" height="400px" alt="">
             </div>
         </div>
     </div>

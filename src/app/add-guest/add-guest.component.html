@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <h2 style="color: #CFFFDC;">Guest Add Portal</h2>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label style="color: #93FFD8;" for="" class="forem-label">guest  Code</label>
+                    <input name="employeeCode" [(ngModel)]="guest_id" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label style="color: #93FFD8;" for="" class="forem-label">name</label>
+                    <input  name="name" [(ngModel)]="name" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label style="color: #93FFD8;" for="" class="forem-label">address</label>
+                    <input name="designation" [(ngModel)]="address"  type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                    <button (click)="readValue()" style="background-color: #548CFF;" class="btn btn">add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
