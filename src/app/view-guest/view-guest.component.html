@@ -1,0 +1,34 @@
+<app-navbar-security></app-navbar-security>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-4">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <table class="table table-bordered border-primary">
+                        <thead>
+                        <tr scope="row">
+                            <th scope="col">guest id</th>
+                            <th scope="col">name</th>
+                            <th scope="col">address</th>
+                            <th scope="col">login</th>
+                            <th scope="col">logout</th>
+                        </tr></thead>
+                        <tbody>
+                        <tr *ngFor="let i of data" scope="row">
+                            <td scope="col"  >{{i.guest_id}}</td>
+                            <td scope="col"  >{{i.name}}</td>
+                            <td scope="col"  >{{i.address}}</td>
+                            <td scope="col" >{{i.login}}</td>
+                            <td scope="col"  >{{i.logout}}</td>
+                            <td scope="col" *ngIf="i.status==-1" >{{i.days}}</td>
+                            <td scope="col" *ngIf="i.login==null" ><button (click)="checkin(i.guest_id)" class="btn btn-success" >checkin</button></td>
+                            <td scope="col" *ngIf="i.logout == null" ><button (click)="checkout(i.guest_id)" class="btn btn-danger" >checkout</button></td>
+
+                        </tr></tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+  </div>

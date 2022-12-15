@@ -20,6 +20,7 @@ export class AddGuestComponent {
         "name" : this.name,
         "address" : this.address
     }
+    console.log(data)
     this.api.addGuest(data).subscribe(
       (generated:any)=>{
         if(generated.status=="success"){

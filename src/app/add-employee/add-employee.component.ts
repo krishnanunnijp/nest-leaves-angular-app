@@ -7,7 +7,9 @@ import { ApiService } from '../api.service';
   styleUrls: ['./add-employee.component.css']
 })
 export class AddEmployeeComponent {
-  constructor(private api:ApiService){}
+  constructor(private api:ApiService){
+    localStorage.setItem("emp","1");
+  }
   employeeCode=""
   name=""
   designation=""
